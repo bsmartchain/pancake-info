@@ -19,9 +19,9 @@ const TOKEN_OVERRIDES: { [address: string]: { name: string; symbol: string } } =
     name: 'Ether (Wrapped)',
     symbol: 'ETH',
   },
-  '0x1416946162b1c2c871a73b07e932d2fb6c932069': {
-    name: 'Energi',
-    symbol: 'NRGE',
+  '0x48e15abbcb21c7f564c1b5ae08a9f7829745f6d7': {
+    name: 'Backup Token',
+    symbol: 'BACKUP',
   },
 }
 
