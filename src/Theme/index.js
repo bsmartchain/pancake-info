@@ -59,11 +59,11 @@ const theme = (darkMode, color) => ({
   primaryText1: darkMode ? '#6da8ff' : '#4FD8DE',
 
   // secondary colors
-  secondary1: darkMode ? '#2172E5' : '#4FD8DE',
-  secondary2: darkMode ? '#17000b26' : '#F6DDE8',
-  secondary3: darkMode ? '#17000b26' : '#FDEAF1',
+  secondary1: darkMode ? '#2172E5' : '#FFDE00',
+  secondary2: darkMode ? '#17000b26' : '#FFCDAE',
+  secondary3: darkMode ? '#17000b26' : '#FFE2CF',
 
-  shadow1: darkMode ? '#000' : '#2F80ED',
+  shadow1: darkMode ? '#000' : '#FFDE59',
 
   // other
   red1: '#FF6871',
