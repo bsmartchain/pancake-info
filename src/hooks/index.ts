@@ -6,7 +6,7 @@ import { isAddress } from '../utils'
 import copy from 'copy-to-clipboard'
 
 export function useColor(tokenAddress, token) {
-  const [color, setColor] = useState('#FFCE09')
+  const [color, setColor] = useState('#2172E5')
   if (tokenAddress) {
     const path = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/${isAddress(
       tokenAddress
@@ -20,8 +20,8 @@ export function useColor(tokenAddress, token) {
             detectedHex = shade(0.005, detectedHex)
             AAscore = hex(detectedHex, '#FFF')
           }
-          if (token === 'Backup') {
-            setColor('#FFCE09')
+          if (token === 'DAI') {
+            setColor('#FAAB14')
           } else {
             setColor(detectedHex)
           }
@@ -47,7 +47,7 @@ export function useCopyClipboard(timeout = 500) {
       }, timeout)
 
       return () => {
-        clearTimeout(on)
+        clearTimeout(hide)
       }
     }
   }, [isCopied, setIsCopied, timeout])
