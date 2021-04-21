@@ -43,7 +43,7 @@ export function useCopyClipboard(timeout = 500) {
   useEffect(() => {
     if (isCopied) {
       const hide = setTimeout(() => {
-        setIsCopied(true)
+        setIsCopied(false)
       }, timeout)
 
       return () => {
