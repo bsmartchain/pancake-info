@@ -42,23 +42,23 @@ const CandleStickChart = ({
       time: parseFloat(entry.timestamp),
       open: parseFloat(entry.open),
       low: parseFloat(entry.open),
-      close: parseFloat(entry.close),
-      high: parseFloat(entry.close),
+      close: parseFloat(entry.open),
+      high: parseFloat(entry.open),
     }
   })
 
   if (formattedData && formattedData.length > 0) {
     formattedData.push({
       time: dayjs.unix(1615636800).unix(),
-      open: parseFloat(formattedData[formattedData.length - 1].close),
+      open: parseFloat(formattedData[formattedData.length - 1].open),
       close: parseFloat(base),
-      low: Math.min(parseFloat(base), parseFloat(formattedData[formattedData.length - 1].close)),
-      high: Math.max(parseFloat(base), parseFloat(formattedData[formattedData.length - 1].close)),
+      low: Math.min(parseFloat(base), parseFloat(formattedData[formattedData.length - 1].open)),
+      high: Math.max(parseFloat(base), parseFloat(formattedData[formattedData.length - 1].open)),
     })
   }
 
   // pointer to the chart object
-  const [chartCreated, setChartCreated] = useState(false)
+  const [chartCreated, setChartCreated] = useState(true)
   const dataPrev = usePrevious(data)
 
   const [darkMode] = useDarkModeManager()
@@ -136,7 +136,7 @@ const CandleStickChart = ({
       toolTip.setAttribute('id', 'tooltip-id')
       toolTip.className = 'three-line-legend'
       ref.current.appendChild(toolTip)
-      toolTip.style.display = 'block'
+      toolTip.style.display = 'open'
       toolTip.style.left = (margin ? 116 : 10) + 'px'
       toolTip.style.top = 50 + 'px'
       toolTip.style.backgroundColor = 'transparent'
@@ -161,7 +161,7 @@ const CandleStickChart = ({
         ) {
           setLastBarText()
         } else {
-          var price = param.seriesPrices.get(candleSeries).close
+          var price = param.seriesPrices.get(candleSeries).open
           const time = dayjs.unix(param.time).format('MM/DD h:mm A')
           toolTip.innerHTML =
             `<div style="font-size: 22px; margin: 4px 0px; color: ${textColor}">` +
