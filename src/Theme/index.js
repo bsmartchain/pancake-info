@@ -12,10 +12,10 @@ export default function ThemeProvider({ children }) {
 
 const theme = (darkMode, color) => ({
   customColor: color,
-  textColor: darkMode ? color : 'black',
+  textColor: darkMode ? color : 'yellow',
 
-  panelColor: darkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0)',
-  backgroundColor: darkMode ? '#191326' : '#f5f3f3',
+  panelColor: darkMode ? 'rgba(ff, ff, d3, 0)' : 'rgba(255, 255, 255, 0)',
+  backgroundColor: darkMode ? '#FFFFD3' : '#f5f3f3',
 
   // uniswapPink: darkMode ? '#4FD8DE' : 'black',
   uniswapPink: darkMode ? 'red' : 'black',
