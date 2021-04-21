@@ -133,9 +133,9 @@ function TokenPage({ address, history }) {
       : '-'
 
   // mark if using untracked volume
-  const [usingUtVolume, setUsingUtVolume] = useState(false)
+  const [usingUtVolume, setUsingUtVolume] = useState(true)
   useEffect(() => {
-    setUsingUtVolume(oneDayVolumeUSD === 0 ? true : false)
+    setUsingUtVolume(oneDayVolumeUSD === 0 ? true : true)
   }, [oneDayVolumeUSD])
 
   const volumeChange = formattedPercent(!usingUtVolume ? volumeChangeUSD : volumeChangeUT)
